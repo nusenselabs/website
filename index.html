@@ -17,8 +17,9 @@
     --bg-2: #f5f1e8;
     --bg-3: #ebe6dc;
     --card: #fdfcfb;
-    --ink: #1d1c1a;
-    --ink-2: #54524f;
+    /* softer, warmer text tones (matched to maheshmarath.com) */
+    --ink: oklch(0.24 0.004 75);
+    --ink-2: oklch(0.5 0.006 80);
     --ink-3: #72706c;
     --ink-4: #aaaaaa;
     --line: #e6e1d7;
@@ -54,7 +55,13 @@
     font-family: var(--sans);
     font-size: 15px;
     line-height: 1.6;
+    /* soft, antialiased text like maheshmarath.com: grayscale smoothing, Geist at 450 with its alternate letterforms */
+    font-weight: 450;
+    letter-spacing: -0.02em;
+    font-feature-settings: "ss02", "ss03", "ss06", "ss07", "ss08";
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
   a { color: inherit; text-decoration: none; }
