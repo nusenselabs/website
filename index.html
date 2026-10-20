@@ -75,7 +75,9 @@
     border: 1px solid var(--line);
     border-radius: 6px;
     pointer-events: none;
-    z-index: 1;
+    /* huge background-coloured spread masks everything outside the frame, so content only shows inside the line */
+    box-shadow: 0 0 0 100vmax var(--bg);
+    z-index: 40; /* above page content, below the header (50) and cookie notice (60) */
   }
 
   /* ---------- Header ---------- */
